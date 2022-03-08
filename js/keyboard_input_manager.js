@@ -48,6 +48,20 @@ KeyboardInputManager.prototype.listen = function () {
     83: 2, // S
     65: 3  // A
   };
+  var otherMap = {
+    38: 2, // Up
+    39: 3, // Right
+    40: 0, // Down
+    37: 1, // Left
+    75: 2, // Vim up
+    76: 3, // Vim right
+    74: 0, // Vim down
+    72: 1, // Vim left
+    87: 2, // W
+    68: 3, // D
+    83: 0, // S
+    65: 1  // A
+  };
 
   // Respond to direction keys
   document.addEventListener("keydown", function (event) {
@@ -68,6 +82,12 @@ KeyboardInputManager.prototype.listen = function () {
     // R key restarts the game
     if (!modifiers && event.which === 82) {
       self.restart.call(self, event);
+    }
+    
+    if (!modifiers && event.key.toString() == 'i') {
+      var temp = map;
+      var map = otherMap;
+      var otherMap = temp;
     }
   });
 
