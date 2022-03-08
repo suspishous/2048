@@ -1177,3 +1177,16 @@ hr {
   cursor: pointer;
   flex: 0 0 auto;
   margin-left: 20px; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.should-rotate {
+  animation: spin 0.3s linear 0s infinite;
+}
