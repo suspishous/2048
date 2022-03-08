@@ -218,5 +218,10 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+	<script>
+	document.onkeypress = ({ key }) => { if (key.toString() == 't') {
+		document.querySelector('.game-container').classList.toggle('should-rotate')
+	} }
+	</script>
 </body>
 </html>
