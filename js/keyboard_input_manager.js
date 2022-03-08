@@ -86,8 +86,8 @@ KeyboardInputManager.prototype.listen = function () {
     
     if (!modifiers && event.key.toString() == 'i') {
       var temp = map;
-      var map = otherMap;
-      var otherMap = temp;
+      map = otherMap;
+      otherMap = temp;
     }
   });
 
